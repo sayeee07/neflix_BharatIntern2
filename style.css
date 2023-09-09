@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./images/bg.jpeg);
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-all {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 77%;
+    height: 13vh;
+}
+
+.logo {
+    background-image: url(./images/Netflix.png);
+    background-size: cover;
+    height: 35px;
+    width: 135px;
+    max-width: 100%;
+}
+
+.select-lang {
+    height: 32px;
+    background: transparent;
+    color: whitesmoke;
+    border-radius: 5px;
+    width: 115px;
+    margin-right: 14px;
+}
+
+.sign-in {
+    height: 32px;
+    width: 80px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    padding: 0.25rem 1rem;
+    background-color: rgb(229, 9, 20);
+    font-size: 0.875rem;
+    color: white;
+}
+
+.sign-in:hover {
+    background-color: rgb(255, 27, 38);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    color: rgb(255, 255, 255);
+    padding-top: 13%;
+    padding-bottom: 10%;
+}
+
+.first {
+    font-size: 8vmin;
+    font-weight: 900;
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.second {
+    font-size: 4vmin;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 200%;
+}
+
+.third {
+    font-size: 3vmin;
+    text-align: center;
+    line-height: 200%;
+    margin-top: 10px;
+}
+
+.email-login {
+    display: flex;
+    top: 10px;
+    margin-top: 1.5%;
+    line-height: 200%;
+    position: relative;
+    justify-content: center;
+}
+
+.input-email {
+    border: 2px solid white;
+    font-size: 1.2rem;
+    color: white;
+    height: 50px;
+    margin-right: 1%;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    width: 45%;
+}
+
+.get-started {
+    width: 26%;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    font-weight: 500;
+    background-color: rgb(229, 9, 20);
+    color: white;
+    cursor: pointer;
+    font-size: 3vmin;
+}
+
+.get-started:hover {
+    background-color: rgb(255, 27, 38);
+}
+
+.line {
+    width: 100%;
+    height: 0.5rem;
+    background-color: rgb(35, 35, 35);
+}
+
+.home {
+    padding: 55px 20px;
+    color: azure;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0);
+}
+
+.contents {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.text-col {
+    display: inline;
+    width: 50%;
+}
+
+.text-col h2 {
+    margin: 4%;
+    margin-left: 10%;
+    font-size: 230%;
+}
+
+.text-col p {
+    margin: 4%;
+    margin-left: 10%;
+    font-size: 120%;
+}
+
+.img-col {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 50%;
+    margin: 1% 3%;
+    float: ;
+}
+
+.img-col img {
+    width: 80%;
+    margin: 2%;
+}
+
+.foot-panel1 {
+    margin-top: 5px;
+    background-color: black;
+    width: 100%;
+}
+
+.content-heading {
+    font-size: 230%;
+    font-weight: 600;
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 5px;
+}
+
+.questions {
+    display: block;
+}
+
+.foot-FAQ {
+    margin: 5px auto;
+    width: 100%;
+    max-width: 75%;
+}
+
+.foot-FAQ li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.foot-FAQ li label {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 18px;
+    height: 75px;
+    font-weight: 400;
+    background: #303030;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.foot-FAQ .con {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s, padding 0.3s;
+}
+
+.foot-FAQ label:hover {
+    background-color: rgb(76, 76, 77);
+}
+
+.foot-FAQ input[type="radio"]:checked+label+.con {
+    max-height: 600px;
+    padding: 20px 20px;
+}
+
+.foot-FAQ input[type="radio"]:checked+label::after {
+    transform: rotate(135deg);
+}
+
+.email-login2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-email2 {
+    border: 1px solid white;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 2px;
+    width: 23%;
+    height: 50px;
+    margin-right: 10px;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.get-started2 {
+    width: 10%;
+    font-size: 3vmin;
+    height: 53px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(229, 9, 20);
+}
+
+.get-started2:hover {
+    background-color: rgb(255, 27, 38);
+}
+
+.footer {
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.footer a {
+    text-decoration: underline !important;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.footer .col a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.footer .col a:hover {
+    color: #db0001;
+}
+
+.footer-lang-btn {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer-lang-btn .Lang-Btn {
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-lang-btn .select-lang {
+    height: 32px;
+    width: 115px;
+    margin-left: 10px;
+    background: transparent;
+    color: whitesmoke;
+    border-radius: 5px;
+}
+
+.footer .copyright-txt {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}@media only screen and (max-width:1px){
+    .logo{
+        width: 100px;
+    }
+    .nav-sign-in {
+        padding: 5px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .select-lang,
+    .sign-in{
+        padding: 4px 8px;
+        width: auto;
+        margin-top: 10px;
+    }
+    .header-content{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+
+    }
+    .header-content h1{
+        font-size: 30px;
+    }
+    .email-login2,
+    .get-started2{
+        font-size: 12px;
+        width: a;
+    }
+    .text-col,
+    .img-col {
+        flex-basis: 100%;
+    }
+    .features h2{
+        font-size: 30px;
+    }
+    .features p{
+        font-size: 15px;
+    }
+    .row:nth-child(2), .row:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .features .row{
+        padding: 10px 0;
+    }
+    .faq h2{
+        font-size: 14px;
+    }
+    .accordion .con{
+        font-size: 14px;
+    }
+    .accordion li label{
+        padding: 10px;
+        font-size: 14px;
+
+    }
+    label::after{
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    /* Existing CSS for smaller screens */
+
+    .contents {
+        flex-direction: column; /* Change the flex-direction to stack elements vertically */
+        align-items: center; /* Center-align both text and image */
+    }
+
+    .text-col,
+    .img-col {
+        width: 100%; /* Make both columns take up the full width */
+    }
+
+    .text-col h2 {
+        margin: 4% 0; /* Adjust margin for spacing */
+    }
+    .text-col h2,
+.features h2,
+.faq h2 {
+    font-size: 24px; /* Adjust the font size for <h2> elements as needed */
+}
+
+    .img-col img {
+        width: 80%; /* Adjust image width */
+        margin: 2% 0; /* Adjust margin for spacing */
+    }
+    .text-col p,
+.features p,
+.faq .con,
+.accordion li label {
+    font-size: 16px; /* Adjust the font size for <p> elements as needed */
+}
+    .email-login,
+    .email-login2 {
+        flex-direction: column; /* Change the flex-direction to column */
+        align-items: center; /* Center-align both elements */
+    }
+    .input-email,
+    .input-email2 {
+        width: 80%; /* Make the email input take up the full width */
+        margin-bottom: 10px; /* Add margin at the bottom for spacing */
+    }
+    .get-started,
+    .get-started2 {
+        width: 40%; /* Adjust the width of the "Get Started" button as needed */
+        height: 50px; /* Adjust the height of the button as needed */
+        margin-top: 10px; /* Add margin at the top for spacing */
+    }
+}
+
